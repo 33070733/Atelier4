@@ -10,4 +10,14 @@ class Compte {
   // Commit 4 : Getter pour le solde formaté
   String get solde => '${_solde.toStringAsFixed(2)} \$';
 
+  // Commit 5 : Méthode depot()
+  void depot(double montant) {
+    if (montant > 0) {
+      _solde += montant;
+      print(' Dépôt de $montant \$ effectué.');
+    } else {
+      print(' Montant invalide.');
+    }
+  }
+
 }
