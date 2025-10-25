@@ -21,3 +21,32 @@ class Livre extends Media {
     print('Ceci est un Livre : $titre par $auteur');
   }
 }
+class Film extends Media {
+  int dureeMinutes;
+
+  Film(String titre, this.dureeMinutes) : super(titre);
+
+  @override
+  void afficherType() {
+    print(' Film : "$titre" (${dureeMinutes} minutes)');
+  }
+}
+
+// Fonction pour afficher le catalogue
+void afficherCatalogue(List<Media> catalogue) {
+  print('--- Catalogue de Médias ---');
+  for (var media in catalogue) {
+    media.afficherType();
+  }
+}
+
+// Fonction pour générer un catalogue exemple
+List<Media> genererCatalogue() {
+  return [
+    Livre('Le Petit Prince', 'Antoine de Saint-Exupéry'),
+    Film('Inception', 148),
+    Livre('1984', 'George Orwell'),
+    Film('Titanic', 195),
+    Livre('Harry Potter', 'J.K. Rowling'),
+  ];
+}
