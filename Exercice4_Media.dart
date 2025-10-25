@@ -30,7 +30,7 @@ class Film extends Media {
 
   @override
   void afficherType() {
-    print('🎬 Film : "$titre" (${dureeMinutes} minutes)');
+    print(' Film : "$titre" (${dureeMinutes} minutes)');
   }
 }
 
