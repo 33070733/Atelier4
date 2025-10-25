@@ -50,3 +50,47 @@ List<Media> genererCatalogue() {
     Livre('Harry Potter', 'J.K. Rowling'),
   ];
 }
+int compterLivres(List<Media> liste) =>
+    liste.where((m) => m is Livre).length;
+
+int compterFilms(List<Media> liste) =>
+    liste.where((m) => m is Film).length;
+
+void afficherStatistiques(List<Media> liste) {
+  print('\n Statistiques ');
+  print('Nombre de livres : ${compterLivres(liste)}');
+  print('Nombre de films : ${compterFilms(liste)}');
+}
+
+extension ResumeMedia on Media {
+  String get resume {
+    if (this is Livre) {
+      var l = this as Livre;
+      return 'Livre : ${l.titre} (${l.auteur})';
+    } else if (this is Film) {
+      var f = this as Film;
+      return 'Film : ${f.titre} (${f.dureeMinutes} min)';
+    } else {
+      return 'Média inconnu';
+    }
+  }
+}
+
+void afficherResumes(List<Media> liste) {
+  print('\n Résumés des médias ');
+  for (var m in liste) {
+    print(m.resume);
+  }
+}
+
+// Fonction main
+void main() {
+  print('--- Test Exercice 4 : Types de médias ---');
+
+  var catalogue = genererCatalogue();
+
+  afficherCatalogue(catalogue);
+  afficherStatistiques(catalogue);
+  afficherResumes(catalogue);
+}
+
