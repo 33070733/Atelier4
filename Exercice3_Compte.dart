@@ -29,5 +29,18 @@ class Compte {
       print(' Retrait refusé (solde insuffisant ou montant invalide).');
     }
   }
+}
 
+// Commit 7 : Fonction main() pour tester la classe Compte
+void main() {
+  print('--- Test Exercice 3 : Compte Bancaire ---');
+
+  var compte1 = Compte('12345');
+  print('Solde initial : ${compte1.solde}');
+
+  compte1.depot(200);
+  compte1.depot(-50);
+  compte1.retrait(75);
+
+  print('Solde final : ${compte1.solde}');
 }
