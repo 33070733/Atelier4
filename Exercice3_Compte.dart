@@ -20,4 +20,14 @@ class Compte {
     }
   }
 
+  // Commit 6 : Méthode retrait() (bonus)
+  void retrait(double montant) {
+    if (montant > 0 && montant <= _solde) {
+      _solde -= montant;
+      print(' Retrait de $montant \$ effectué.');
+    } else {
+      print(' Retrait refusé (solde insuffisant ou montant invalide).');
+    }
+  }
+
 }
