@@ -15,3 +15,11 @@ class Cercle extends Forme {
 }
 
 // ici c'est bon je faire le comit 5 - Classe Cercle avec calculerAire()
+class Rectangle extends Forme {
+  final double longueur, largeur;
+  Rectangle(this.longueur, this.largeur);
+
+  double calculerAire() => longueur * largeur;
+}
+
+//maintenant le Commit 7 : Classe Rectangle avec calculerAire()"
