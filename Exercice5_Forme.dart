@@ -23,3 +23,14 @@ class Rectangle extends Forme {
 }
 
 //maintenant le Commit 7 : Classe Rectangle avec calculerAire()"
+void main() {
+  var c = Cercle(5);
+  var r = Rectangle(4, 6);
+
+  c.afficherMessage();
+  print("Aire du cercle : ${c.calculerAire()}");
+
+  r.afficherMessage();
+  print("Aire du rectangle : ${r.calculerAire()}");
+}
+//Commit 9 : Création des instances et appeler afficherMessage() et calculerAire().
