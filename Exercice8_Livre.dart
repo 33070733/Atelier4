@@ -22,3 +22,56 @@ void main() {
   livre2.afficherInfos();
   livre3.afficherInfos();
 }
+//  Question 5 : Ajout de l'attribut privé _pages et du getter pages
+class LivreV2 {
+  String titre;
+  String auteur;
+  int _pages = 200; // Valeur par défaut
+  int get pages => _pages;
+
+  LivreV2(this.titre, this.auteur);
+
+  void afficherInfos() {
+    print("Titre: $titre, Auteur: $auteur, Pages: $pages");
+  }
+}
+
+// Question 6 : Ajout d'une propriété statique totalLivres
+class LivreV3 {
+  String titre;
+  String auteur;
+  int _pages = 200;
+  int get pages => _pages;
+
+  static int totalLivres = 0;
+
+  LivreV3(this.titre, this.auteur) {
+    totalLivres++;
+  }
+
+  void afficherInfos() {
+    print("Titre: $titre, Auteur: $auteur, Pages: $pages");
+  }
+}
+
+// un autre Commit  – Question 7 : Ajout d’une méthode statique pour afficher le nombre total de livres
+class LivreV4 {
+  String titre;
+  String auteur;
+  int _pages = 200;
+  int get pages => _pages;
+
+  static int totalLivres = 0;
+
+  LivreV4(this.titre, this.auteur) {
+    totalLivres++;
+  }
+
+  void afficherInfos() {
+    print("Titre: $titre, Auteur: $auteur, Pages: $pages");
+  }
+
+  static void afficherTotalLivres() {
+    print("Total de livres créés : $totalLivres");
+  }
+}
