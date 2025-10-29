@@ -12,4 +12,14 @@ class Point {
     _x += dx;
     _y += dy;
   }
+    void display() {
+    print("Coordonnées du point : ($_x, $_y)");
+  }
+  // Commit dans le question 4 : Test de la classe Point
+void main() {
+  var pt = Point(2, 5);
+  pt.display();     // Affiche : Coordonnées du point : (2.0, 5.0)
+  pt.move(-1, 3);
+  pt.display();     // Affiche : Coordonnées du point : (1.0, 8.0)
+}
 }
