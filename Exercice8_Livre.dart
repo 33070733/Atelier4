@@ -84,7 +84,7 @@ class Roman extends LivreV4 {
   Roman(String titre, String auteur, this.genre) : super(titre, auteur);
 }
 
-// Commit 9 dans Question 9 : Ajout d’une méthode pour afficher aussi le genre
+// Commit 9 dans Qst 9 : Ajout d’un méthode pour afficher aussi le genre
 class RomanV2 extends LivreV4 {
   String genre;
 
