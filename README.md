@@ -1,5 +1,4 @@
 # Atelier 4 - Classes et objets (Dart)
-# Atelier 04 – Classes et objets
 
 **Cours :** Développement d’applications  
 **Programme :** 2e année – Techniques des Systèmes Informatiques  
@@ -58,5 +57,6 @@ Chaque exercice a été commité individuellement pour suivre les bonnes pratiqu
 **Instructions Git :**
 - À chaque question que jai touve un commit , un commit a été effectué pour enregistrer les changements.  
 - À la fin, l’atelier a été poussé sur le dépôt distant GitHub.  
+
 
 
