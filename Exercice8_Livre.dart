@@ -1,38 +1,24 @@
-// qst 1 : Création de la classe Livre avec attributs titre et auteur
+// qst 1 – Question 1 : Création de la classe Livre avec deux attributs String : titre et auteur
 class Livre {
   String titre;
   String auteur;
-  int _pages = 200; // attribut privé
-  static int totalLivres = 0; // compteur de livres créés
 
-  // qst 2 : Constructeur
-  Livre(this.titre, this.auteur) {
-    totalLivres++;
-  }
+  // qst 2 – Question 2 : Ajout du constructeur approprié à Livre
+  Livre(this.titre, this.auteur);
 
-  // qst 3 : Getter pour _pages
-  int get pages => _pages;
-
-  // Commit dans qst 4 : Méthode afficherInfos()
+  // qst 3 – Question 3 : Ajout de la méthode afficherInfos()
   void afficherInfos() {
-    print("Titre: $titre, Auteur: $auteur, Pages: $pages");
-  }
-
- // qst 5 : Méthode statique pour afficher le total
-  static void afficherTotalLivres() {
-    print("Total de livres créés : $totalLivres");
+    print("Titre: $titre, Auteur: $auteur");
   }
 }
 
-// qst 6 : Classe Roman qui hérite de Livre
-class Roman extends Livre {
-  String genre;
+// Commit dans qst 4 – Question 4 : Création de plusieurs objets Livre et affichage de leurs informations
+void main() {
+  var livre1 = Livre("Le Petit Prince", "Antoine de Saint-Exupéry");
+  var livre2 = Livre("1984", "George Orwell");
+  var livre3 = Livre("L'Étranger", "Albert Camus");
 
-  Roman(String titre, String auteur, this.genre) : super(titre, auteur);
-
-  // Commit dans qst 7 : Méthode afficherInfos() avec genre
-  @override
-  void afficherInfos() {
-    print("Titre: $titre, Auteur: $auteur, Genre: $genre, Pages: $pages");
-  }
+  livre1.afficherInfos();
+  livre2.afficherInfos();
+  livre3.afficherInfos();
 }
