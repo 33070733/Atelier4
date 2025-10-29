@@ -75,3 +75,23 @@ class LivreV4 {
     print("Total de livres créés : $totalLivres");
   }
 }
+
+
+// Qst 8 : Création de la classe Roman qui hérite de Livre
+class Roman extends LivreV4 {
+  String genre;
+
+  Roman(String titre, String auteur, this.genre) : super(titre, auteur);
+}
+
+// Commit 9 dans Question 9 : Ajout d’une méthode pour afficher aussi le genre
+class RomanV2 extends LivreV4 {
+  String genre;
+
+  RomanV2(String titre, String auteur, this.genre) : super(titre, auteur);
+
+  @override
+  void afficherInfos() {
+    print("Titre: $titre, Auteur: $auteur, Genre: $genre, Pages: $pages");
+  }
+}
