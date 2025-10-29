@@ -1,17 +1,23 @@
+
 abstract class Connectable {
   void connecter(String utilisateur);
   void deconnecter();
 }
+
 class ServeurAPI implements Connectable {
-   @override
+
+  @override
   void connecter(String utilisateur) {
     print("ServeurAPI : Connexion établie pour $utilisateur.");
+  }
 
-    @override
+
+  @override
   void deconnecter() {
     print("ServeurAPI : Déconnexion réussie.");
   }
 }
+
 class BaseDeDonnees implements Connectable {
   @override
   void connecter(String utilisateur) {
@@ -23,6 +29,7 @@ class BaseDeDonnees implements Connectable {
     print("BaseDeDonnees : Déconnexion réussie.");
   }
 }
+
 void main() {
   var serveur = ServeurAPI();
   var base = BaseDeDonnees();
