@@ -18,3 +18,21 @@ class Livre {
     print("Titre: $titre, Auteur: $auteur, Pages: $pages");
   }
 
+ // qst 5 : Méthode statique pour afficher le total
+  static void afficherTotalLivres() {
+    print("Total de livres créés : $totalLivres");
+  }
+}
+
+// qst 6 : Classe Roman qui hérite de Livre
+class Roman extends Livre {
+  String genre;
+
+  Roman(String titre, String auteur, this.genre) : super(titre, auteur);
+
+  // Commit dans qst 7 : Méthode afficherInfos() avec genre
+  @override
+  void afficherInfos() {
+    print("Titre: $titre, Auteur: $auteur, Genre: $genre, Pages: $pages");
+  }
+}
