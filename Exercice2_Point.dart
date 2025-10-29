@@ -18,3 +18,10 @@ class Point {
   }
 }
 
+// un commit apr qst 5  : Test complet dans main()
+void main() {
+  var pt = Point(2, 5);
+  pt.display(); // Point(x: 2.0, y: 5.0)
+  pt.move(-1, 3);
+  pt.display(); // Point(x: 1.0, y: 8.0)
+}
