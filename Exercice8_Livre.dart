@@ -12,7 +12,7 @@ class Livre {
   }
 }
 
-// Commit dans qst 4 – Question 4 : Création de plusieurs objets Livre et affichage de leurs informations
+// un Commit dans qst 4 – Question 4 : Création de plusieurs objets Livre et affichage de leurs informations
 void main() {
   var livre1 = Livre("Le Petit Prince", "Antoine de Saint-Exupéry");
   var livre2 = Livre("1984", "George Orwell");
