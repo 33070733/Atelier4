@@ -1,20 +1,20 @@
+// qst 1 : Création de la classe Livre avec attributs titre et auteur
 class Livre {
-  String titre = "";
-  String auteur = "";
+  String titre;
+  String auteur;
+  int _pages = 200; // attribut privé
+  static int totalLivres = 0; // compteur de livres créés
 
-  Livre(this.titre, this.auteur);
-
-  void afficherInfos() {
-    print("Titre: $titre, Auteur: $auteur");
+  // qst 2 : Constructeur
+  Livre(this.titre, this.auteur) {
+    totalLivres++;
   }
-}
 
-void main() {
-  var livre1 = Livre("Le Petit Prince", "Antoine de Saint-Exupéry");
-  var livre2 = Livre("1984", "George Orwell");
-  var livre3 = Livre("L'Étranger", "Albert Camus");
+  // qst 3 : Getter pour _pages
+  int get pages => _pages;
 
-  livre1.afficherInfos();
-  livre2.afficherInfos();
-  livre3.afficherInfos();
-}
+  // Commit dans qst 4 : Méthode afficherInfos()
+  void afficherInfos() {
+    print("Titre: $titre, Auteur: $auteur, Pages: $pages");
+  }
+
